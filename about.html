@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tristan-Gael Bara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;250;300;350;400;450;500;550;600;650&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Tristan-Gael Bara</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" data-i18n="nav-home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link active" data-i18n="nav-about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link" data-i18n="nav-portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Images/Tristan-Gael Bara Eng CV 2025.pdf" class="nav-link cv-link" target="_blank" rel="noopener noreferrer">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" data-i18n="nav-contact">Contact</a>
+                </li>
+                <li class="nav-item nav-controls">
+                    <div class="nav-toggle-group">
+                        <!-- Dark mode and language toggles will be added by JavaScript -->
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            
+            <div class="about-content">
+                <div class="about-intro-section">
+                    <div class="about-portrait">
+                        <div class="portrait-placeholder">
+                            <i class="fas fa-user"></i>
+                            <span>Portrait</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <p data-i18n="about-intro-1">
+                                I am a researcher and developer with a background in Cognitive Psychology and Human–Computer Interaction. 
+                                My expertise lies in designing and implementing virtual reality applications for clinical and research purposes.
+                                My work aims to advance our understanding of human cognition and behavior through immersive, reproducible, and data-driven environments.
+                                </p>
+                                <p data-i18n="about-intro-2">
+                                I hold a Master's degree in Cognitive Psychology from the Paris Descartes University during which I researched the adaptation to non-individual Head-Related Transfer Functions for spatial audio in VR.
+                                I was a PhD student at the Conservatoire National des Arts et Métiers (CNAM) in Paris, specialized in Human-Computer Interaction. My research explored the use of virtual reality for neuropsychological assessment and rehabilitation, focusing on creating immersive and interactive environments to diagnose a neuropsychological disorder called Unilateral Spatial Neglect, and develop innovative therapeutic approaches.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-section">
+                    <h3 data-i18n="about-core-competencies">Core Competencies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4 data-i18n="about-core-research"><i class="fas fa-brain"></i> Research & Analysis</h4>
+                            <ul>
+                                <li data-i18n="about-core-statistics">Statistical Analysis</li>
+                                <li data-i18n="about-core-methodology">Research Methodology</li>
+                                <li data-i18n="about-core-visualization">Data Visualization</li>
+                                <li data-i18n="about-core-writing">Scientific Writing</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="about-core-tools"><i class="fas fa-vr-cardboard"></i> Tools</h4>
+                            <ul>                                    
+                                <li data-i18n="about-core-matlab">Matlab</li>
+                                <li data-i18n="about-core-r">R</li>
+                                <li data-i18n="about-core-unity">Unity 3D</li>                                    
+                                <li data-i18n="about-core-blender">Blender</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="about-core-programming"><i class="fas fa-code"></i> Programming</h4>
+                            <ul>
+                                <li data-i18n="about-core-csharp">C#, .Net, Blazor</li>
+                                <li data-i18n="about-core-python">Python</li>
+                                <li data-i18n="about-core-js">JavaScript, HTML/CSS</li>
+                                <li data-i18n="about-core-cpp">C++</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h4 data-i18n="about-core-languages"><i class="fas fa-globe"></i> Languages</h4>
+                            <ul>
+                                <li data-i18n="about-core-english">English (Near-fluent)</li>
+                                <li data-i18n="about-core-french">French (Native)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Tristan-Gael Bara. </p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
+</body>
+</html>

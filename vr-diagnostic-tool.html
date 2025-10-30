@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Diagnostic Tasks for USN - Tristan-Gael Bara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;250;300;350;400;450;500;550;600;650&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="project-detail">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Tristan-Gael Bara</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Images/Tristan-Gael Bara Eng CV 2025.pdf" class="nav-link cv-link" target="_blank" rel="noopener noreferrer">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="about" style="padding-top: calc(60px + var(--spacing-16));">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title" data-i18n="vr-title">VR Diagnostic Tasks for USN</h1>
+                <p class="section-subtitle" data-i18n="vr-subtitle"></p>
+            </div>
+            
+            
+            <div class="about-content">
+
+                
+                <div class="about-intro">
+                    <h3 class="section-heading" data-i18n="vr-context-title">Context</h3>
+                    <p data-i18n="vr-context-p1">
+                        USN is a neuropsychological condition often resulting from right hemisphere brain damage, leading to a lack of awareness of stimuli on the contralesional side (typically the left side). 
+                        Several tasks exist to diagnose USN, but they often lack ecological validity and can be challenging to measure precisely across different clinical settings. 
+                    </p> 
+                    <h3 class="section-heading" data-i18n="vr-goals-title">Goals</h3>
+                    <p data-i18n="vr-goals-p1">
+                        The goal of this research project is to explore the use of virtual reality (VR) technologies for the diagnostic of Unilateral Spatial Neglect (USN). VR offers a 
+                        promising avenue to create controlled, immersive environments that can enhance the assessment process and its sensitivity. Virtual reality also allows to test far space neglect, 
+                        and collect more precise data than standard tests. We explored the relevance of VR tasks based on established neuropsychological tasks 
+                        : the bells test, the baking tray test, and the bisection task. We developed these three tasks in VR replicas as well as ecological versions.
+                    </p>    
+                    <h3 class="section-heading" data-i18n="vr-contribution-title">Contribution</h3>
+                    <p data-i18n="vr-contribution-p1">
+                        I Designed and implemented the VR applications using Unity 3D and C#. This involved creating 3D models, scripting interactive elements, and ensuring accurate data collection for clinical analysis.
+                    </p>                      
+                       
+                </div>
+
+               
+
+                <div class="about-content">
+                    <div class="collapsible-section">
+                        <button id="bellsTestToggle" class="collapsible-section-button">
+                            <span>Bells Test</span>
+                            <i id="bellsTestIcon" class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="bellsTestContent" class="about-intro collapsible-content">
+                        <h4 class="subsection-heading" data-i18n="vr-replica-title">VR replica</h4>
+                        <p data-i18n="vr-bells-replica-p1">
+                            The VR Bells Test replicates the traditional paper-and-pencil version in a virtual environment. 
+                            The bells and the distractors are projected on a cylindrical screen. The patient is asked to find the bells.                                                     
+                            To do that the patient has to point a laser with the controller and press to select the bell. On selection a circle appears around the bell.
+                            The system records not only the number and the position of the bells or distractors selected, but also the complete spatial exploration of the patient.
+                            The application provides a detailed analysis of the performance, and a 2d visualization of the exploration.
+                            The strength of this application lies in testing far space neglect (opposed to near space neglect in the paper version), and in the precision and richness of the data collected.
+                        </p>
+                        
+                        <!-- VR Bells Test Video -->
+                        <div class="media-section">
+                            <video controls class="media-video" preload="metadata">
+                                <source src="Images/VRdiag/Vidéo test des cloches.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="media-caption" data-i18n="vr-bells-replica-caption1">
+                                Demonstration of the VR Bells Test showing patient interaction and spatial exploration tracking
+                            </p>
+                        </div>
+                        
+                        <!-- VR Bells Test Image -->
+                        <div class="media-section">
+                            <img src="Images/VRdiag/Test des cloches AM.png" alt="VR Bells Test Analysis Results" class="clickable-image">
+                            <p class="media-caption" data-i18n="vr-bells-replica-caption2">
+                                Visualization of the VR Bells Test results showing selected bells in order
+                            </p>
+                        </div>
+                        
+                        <h4 style="color: var(--primary-color); margin: var(--spacing-8) 0 var(--spacing-4) 0;" data-i18n="vr-eco-title">Ecological version</h4>
+                        <p data-i18n="vr-bells-eco-p1">
+                            The ecological version of the VR Bells Test offers enhanced real-world relevance by integrating the assessment into naturalistic environments and scenarios. Unlike the traditional replica that maintains the abstract nature of the original paper-and-pencil test, this ecological adaptation embeds the task within meaningful contexts that patients might encounter in daily life.
+                        </p>
+                        <p data-i18n="vr-bells-eco-p2">
+                            This approach increases ecological validity and provides more meaningful insights into how spatial neglect affects real-world functioning. The immersive environment allows for assessment of spatial attention in contexts that are more representative of everyday activities, potentially revealing deficits that might not be apparent in traditional clinical testing scenarios.
+                        </p>
+                        
+                        <!-- Ecological VR Test Image -->
+                        <div class="media-section">
+                            <img src="Images/VRdiag/Egg test.png" alt="Ecological VR Bells Test" class="clickable-image">
+                            <p class="media-caption" data-i18n="vr-bells-eco-caption">
+                                Ecological version of the VR test showing a more naturalistic environment for spatial attention assessment
+                            </p>
+                        </div>
+                    </div>
+                </div>      
+
+                <div class="about-content">
+                    <div class="collapsible-section">
+                        <button id="bakingTrayTestToggle" class="collapsible-section-button">
+                            <span>Baking Tray Test</span>
+                            <i id="bakingTrayTestIcon" class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="bakingTrayTestContent" class="about-intro collapsible-content">
+                        <h4 style="color: var(--primary-color); margin-bottom: var(--spacing-4);" data-i18n="vr-replica-title">VR replica</h4>
+                        <p data-i18n="vr-baking-replica-p1">
+                            The VR Baking Tray Test is an ecological adaptation of a traditional neuropsychological assessment for detecting spatial neglect. In this virtual environment, patients are presented with a kitchen scene where they must place objects (such as cookies or pastries) onto a baking tray. This test evaluates spatial awareness and attention in a more realistic, everyday context.
+                        </p>
+                        <p data-i18n="vr-baking-replica-p2">
+                            The strength of this VR adaptation lies in its ecological validity - it simulates real-world activities that patients encounter in daily life. The system tracks hand movements, object placement patterns, and spatial distribution of actions, providing detailed insights into functional spatial abilities that traditional paper-and-pencil tests cannot capture.
+                        </p>
+                        
+                        <!-- VR Baking Tray Test Video -->
+                        <div class="media-section">
+                            <video controls class="media-video" preload="metadata">
+                                <source src="Images/VRdiag/Video Baking Tray Test.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p class="media-caption" data-i18n="vr-baking-replica-caption">
+                                Demonstration of the VR Baking Tray Test
+                            </p>
+                        </div>
+                        
+                        <h4 style="color: var(--primary-color); margin: var(--spacing-8) 0 var(--spacing-4) 0;" data-i18n="vr-eco-title">Ecological version</h4>
+                        <p data-i18n="vr-baking-eco-p1">
+                            The ecological version of the VR Baking Tray Test enhances realism by incorporating more naturalistic kitchen environments and varied task scenarios. This advanced adaptation moves beyond the basic replica to create authentic cooking situations that better reflect real-world spatial challenges patients face in their daily activities.
+                        </p>
+                        <p data-i18n="vr-baking-eco-p2">
+                            This ecological approach provides deeper insights into functional spatial abilities by presenting tasks within meaningful contexts. The enhanced environmental complexity and realistic interactions offer a more comprehensive assessment of how spatial neglect affects everyday kitchen activities and food preparation tasks.
+                        </p>
+                        
+                        <!-- Ecological Baking Tray Test Image -->
+                        <div class="media-section">
+                            <img src="Images/VRdiag/BTT Eco.png" alt="Ecological VR Baking Tray Test" class="clickable-image">
+                            <p class="media-caption" data-i18n="vr-baking-eco-caption">
+                                Ecological version of the VR Baking Tray Test showing enhanced realistic kitchen environment
+                            </p>
+                        </div>
+                        
+                        <!-- Side-by-Side Comparison Images -->
+                        <div class="image-comparison-section">
+                            <div class="comparison-item">
+                                <img src="Images/VRdiag/BTTEcoNormal.png" alt="BTT Ecological Normal Performance" class="clickable-image">
+                                <p class="media-caption" data-i18n="vr-baking-eco-caption-normal">
+                                    Normal performance pattern
+                                </p>
+                            </div>
+                            <div class="comparison-item">
+                                <img src="Images/VRdiag/BTTEcoPatient.png" alt="BTT Ecological Patient Performance" class="clickable-image">
+                                <p class="media-caption" data-i18n="vr-baking-eco-caption-patient">
+                                    Patient with spatial neglect
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="collapsible-section">
+                        <button id="bisectionTaskToggle" class="collapsible-section-button">
+                            <span>Bisection Task</span>
+                            <i id="bisectionTaskIcon" class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="bisectionTaskContent" class="about-intro collapsible-content">
+                        <h4 style="color: var(--primary-color); margin-bottom: var(--spacing-4);" data-i18n="vr-replica-title">VR replica</h4>
+                        <p data-i18n="vr-bisection-replica-p1">
+                            The VR Bisection Task is a digital adaptation of the traditional line bisection test, a fundamental assessment tool for detecting spatial neglect. In this virtual environment, patients are presented with lines of varying lengths and orientations that they must bisect as accurately as possible using VR controllers or hand tracking.
+                        </p>
+                        <p data-i18n="vr-bisection-replica-p2">
+                            This VR implementation offers several advantages over traditional paper-and-pencil versions, including precise measurement of bisection accuracy, reaction times, and movement patterns. The system can present lines in different spatial planes and orientations, providing a more comprehensive assessment of spatial attention deficits across various visual field regions.
+                        </p>
+                        
+                        <!-- VR Bisection Task Image -->
+                        <div class="media-section">
+                            <img src="Images/VRdiag/Image Bisection.png" alt="VR Bisection Task" class="clickable-image">
+                            <p class="media-caption" data-i18n="vr-bisection-replica-caption">
+                                VR Bisection Task interface showing line bisection assessment in virtual environment
+                            </p>
+                        </div>
+                        
+                        <h4 style="color: var(--primary-color); margin: var(--spacing-8) 0 var(--spacing-4) 0;" data-i18n="vr-eco-title">Ecological version</h4>
+                    </div>
+                </div>
+
+                
+                <div class="about-content">
+                    <h3 style="color: var(--primary-color);" data-i18n="vr-pubs-title">Scientific Publications</h3>
+                    <div class="about-intro">
+                        <a href="https://scholar.google.com/scholar?q=Évaluation+de+la+négligence+spatiale+unilatérale+en+réalité+virtuelle+une+étude+de+cas+Gaffard+Bourlon+Bara" target="_blank" rel="noopener noreferrer" class="publication-link" style="text-decoration: none; color: inherit;">
+                            <div class="publication-item" style="margin-bottom: var(--spacing-6); padding: var(--spacing-4); border-left: 3px solid var(--primary-color); background: var(--gray-50); cursor: pointer; transition: all var(--transition-normal);">
+                                <p style="color: var(--gray-700); font-size: 0.9em; line-height: 1.6;">
+                                    Gaffard, M., Bourlon, C., <strong>Bara, T. G.</strong>, Bouchara, T., & Guilbert, A. (2023). Évaluation de la négligence spatiale unilatérale en réalité virtuelle: une étude de cas. <em>Revue Neurologique</em>, 179, S89.
+                                </p>
+                                <div style="margin-top: var(--spacing-2); color: var(--primary-color); font-size: 0.8em;">
+                                    <i class="fas fa-external-link-alt"></i> <span data-i18n="vr-view-pub">View on Google Scholar</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://scholar.google.com/scholar?q=Validation+of+immersive+virtual+reality+line+and+baguette+bisection+tasks+for+the+assessment+of+unilateral+spatial+neglect+Gaffard+Bourlon+Bara" target="_blank" rel="noopener noreferrer" class="publication-link" style="text-decoration: none; color: inherit;">
+                            <div class="publication-item" style="margin-bottom: var(--spacing-6); padding: var(--spacing-4); border-left: 3px solid var(--primary-color); background: var(--gray-50); cursor: pointer; transition: all var(--transition-normal);">
+                                <p style="color: var(--gray-700); font-size: 0.9em; line-height: 1.6;">
+                                    Gaffard, M., Bourlon, C., <strong>Bara, T. G.</strong>, Bouchara, T., Colle, F., Silvestri, S., ... & Guilbert, A. (2025). Validation of immersive virtual reality line and baguette bisection tasks for the assessment of unilateral spatial neglect. <em>Neuropsychology</em>.
+                                </p>
+                                <div style="margin-top: var(--spacing-2); color: var(--primary-color); font-size: 0.8em;">
+                                    <i class="fas fa-external-link-alt"></i> <span data-i18n="vr-view-pub">View on Google Scholar</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://scholar.google.com/scholar?q=Ecological+assessment+of+unilateral+spatial+neglect+in+immersive+virtual+reality+A+multiple-case+study+to+assess+the+feasibility+and+relevance+of+a+Baking+Tray+Task+Gaffard+Bourlon+Bara" target="_blank" rel="noopener noreferrer" class="publication-link" style="text-decoration: none; color: inherit;">
+                            <div class="publication-item" style="margin-bottom: var(--spacing-6); padding: var(--spacing-4); border-left: 3px solid var(--primary-color); background: var(--gray-50); cursor: pointer; transition: all var(--transition-normal);">
+                                <p style="color: var(--gray-700); font-size: 0.9em; line-height: 1.6;">
+                                    Gaffard, M., Bourlon, C., <strong>Bara, T. G.</strong>, Bouchara, T., Colle, F., Silvestri, S., ... & Guilbert, A. (2025). Ecological assessment of unilateral spatial neglect in immersive virtual reality: A multiple-case study to assess the feasibility and relevance of a Baking Tray Task. <em>Neuropsychological Rehabilitation</em>, 35(6), 1210-1228.
+                                </p>
+                                <div style="margin-top: var(--spacing-2); color: var(--primary-color); font-size: 0.8em;">
+                                    <i class="fas fa-external-link-alt"></i> <span data-i18n="vr-view-pub">View on Google Scholar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Portfolio Button -->
+            <div style="text-align: center; margin-top: var(--spacing-16);">
+                <a href="portfolio.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-i18n="vr-back-button">Back to Portfolio</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" style="
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        cursor: pointer;
+        overflow: auto;
+    ">
+        <div style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 85%;
+            max-height: 85%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        ">
+            <img id="modalImage" src="" alt="" style="
+                max-width: 100%;
+                max-height: 85vh;
+                width: auto;
+                height: auto;
+                border-radius: var(--radius-lg);
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                object-fit: contain;
+            ">
+            <div style="
+                position: absolute;
+                top: -40px;
+                right: 0;
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+                user-select: none;
+            " id="closeModal">&times;</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Tristan-Gael Bara. Bridging cognitive science and technology.</p>
+                <div class="footer-links">
+                    <a href="index.html#home">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Collapsible Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Bells Test
+            const bellsToggleButton = document.getElementById('bellsTestToggle');
+            const bellsContent = document.getElementById('bellsTestContent');
+            const bellsIcon = document.getElementById('bellsTestIcon');
+            
+            // Baking Tray Test
+            const bakingTrayToggleButton = document.getElementById('bakingTrayTestToggle');
+            const bakingTrayContent = document.getElementById('bakingTrayTestContent');
+            const bakingTrayIcon = document.getElementById('bakingTrayTestIcon');
+            
+            // Bisection Task
+            const bisectionTaskToggleButton = document.getElementById('bisectionTaskToggle');
+            const bisectionTaskContent = document.getElementById('bisectionTaskContent');
+            const bisectionTaskIcon = document.getElementById('bisectionTaskIcon');
+            
+            // Generic toggle function
+            function setupToggle(toggleButton, content, icon) {
+                if (toggleButton && content && icon) {
+                    // Set initial state - all sections should start closed
+                    content.style.display = 'none';
+                    content.style.opacity = '0';
+                    icon.className = 'fas fa-chevron-down';
+                    
+                    toggleButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const isVisible = content.style.display === 'block';
+                        
+                        if (isVisible) {
+                            // Hide content
+                            content.style.opacity = '0';
+                            setTimeout(() => {
+                                content.style.display = 'none';
+                            }, 300);
+                            icon.className = 'fas fa-chevron-down';
+                            toggleButton.setAttribute('aria-expanded', 'false');
+                        } else {
+                            // Show content
+                            content.style.display = 'block';
+                            setTimeout(() => {
+                                content.style.opacity = '1';
+                            }, 10);
+                            icon.className = 'fas fa-chevron-up';
+                            toggleButton.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                    
+                    // Set initial aria-expanded attribute
+                    toggleButton.setAttribute('aria-expanded', 'false');
+                }
+            }
+            
+            // Setup all toggles
+            setupToggle(bellsToggleButton, bellsContent, bellsIcon);
+            setupToggle(bakingTrayToggleButton, bakingTrayContent, bakingTrayIcon);
+            setupToggle(bisectionTaskToggleButton, bisectionTaskContent, bisectionTaskIcon);
+            
+            // Image Modal Functionality
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeModal = document.getElementById('closeModal');
+            const clickableImages = document.querySelectorAll('.clickable-image');
+            
+            // Add click event to all clickable images
+            clickableImages.forEach(function(img) {
+                img.addEventListener('click', function() {
+                    modal.style.display = 'block';
+                    modalImage.src = this.src;
+                    modalImage.alt = this.alt;
+                    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                });
+            });
+            
+            // Close modal when clicking the X or the modal background
+            function closeImageModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+            
+            closeModal.addEventListener('click', closeImageModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeImageModal();
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    closeImageModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

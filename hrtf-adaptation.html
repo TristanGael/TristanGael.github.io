@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRTF Adaptation Research - Tristan-Gael Bara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;250;300;350;400;450;500;550;600;650&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="project-detail">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Tristan-Gael Bara</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Images/Tristan-Gael Bara Eng CV 2025.pdf" class="nav-link cv-link" target="_blank" rel="noopener noreferrer">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Detail Section -->
+    <section class="about" style="padding-top: calc(60px + var(--spacing-16));">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title" data-i18n="hrtf-title">HRTF Adaptation Research</h1>
+                <p class="section-subtitle" data-i18n="hrtf-subtitle"></p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-intro">
+                    <h3 style="color: var(--primary-color);" data-i18n="hrtf-context-title">Context</h3>
+                    <p data-i18n="hrtf-context-p1">
+                        Head-Related Transfer Functions (HRTFs) are crucial for creating realistic spatial audio experiences in virtual environments. However, individualized HRTFs require complex and time-consuming measurements in specialized acoustic facilities. Non-individual HRTFs, while more accessible, often result in poor spatial audio perception due to individual anatomical differences.
+                    </p> 
+                    <h3 style="color: var(--primary-color);" data-i18n="hrtf-goals-title">Goals</h3>
+                    <p data-i18n="hrtf-goals-p1">
+                        This research project explores methods for adapting non-individual HRTFs to improve spatial audio perception without requiring individual measurements. The goal is to develop short training protocols that can enhance the effectiveness of generic HRTFs, making high-quality spatial audio more accessible for VR applications, gaming, and assistive technologies.
+                    </p>    
+                    <h3 style="color: var(--primary-color);" data-i18n="hrtf-contribution-title">Contribution</h3>
+                    <p data-i18n="hrtf-contribution-p1">
+                        I developed the HRTF selection methods and the adaptation methods using Unity 3D and specialized audio processing libraries. 
+                        
+                          
+
+                    </p>                      
+                </div>
+
+                <div class="about-content">
+                    <div class="collapsible-section">
+                        <button id="hrtfSelectionToggle" class="collapsible-section-button">
+                            <span data-i18n="hrtf-selection-title">Non-individualized HRTF Selection</span>
+                            <i id="hrtfSelectionIcon" class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="hrtfSelectionContent" class="about-intro collapsible-content">
+                        <p data-i18n="hrtf-selection-p1">
+                           A first study we conducted revealed that individual differences in the adaptation capacity to non-individual HRTFs was significant and possibly explained by the distance between the user own HRTFs and the non-indivualized HRTFs used in training. 
+                           To compensate for that, we added a selection phase designed to identify and select the most suitable non-individualized HRTFs for each user.                             
+                        </p>
+                        <p data-i18n="hrtf-selection-p2">
+                            The selection test involved 8 differents set of HRTFs. Participants were immersed in a virtual environment where they were visually presented with the expected path of the sound source. 
+                           They then had to listen and grade the different HRTF sets based on the match between the expected path and the perceived path of the sound source.
+                           Three different path were used: a horizontal circle around the user, a vertical circle aroud the user, and a path moving from the front to the back of the user.
+                           The HRTFs set with the highest average score was selected for the subsequent adaptation training and localization task.
+                        </p>
+                        
+                        <!-- Figure 1 Image -->
+                        <div style="text-align: center; margin: var(--spacing-6) 0;">
+                            <img src="Images/Figure 1.png" 
+                                 alt="HRTF Selection Process Diagram" 
+                                 style="max-width: 40%; height: auto; border-radius: 8px; box-shadow: var(--shadow); cursor: pointer; transition: transform var(--transition-normal);"
+                                 onmouseover="this.style.transform='scale(1.02)'"
+                                 onmouseout="this.style.transform='scale(1)'"
+                                 onclick="openModal('Images/Figure 1.png', 'HRTF Selection Process Diagram')">
+                            <p style="font-size: 0.8em; color: var(--gray-600); margin-top: var(--spacing-2); font-style: italic;" data-i18n="hrtf-selection-caption">
+                                Figure 1: HRTF Selection Tested positions and path
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="collapsible-section">
+                        <button id="adaptationMethodsToggle" class="collapsible-section-button">
+                            <span data-i18n="hrtf-adaptation-title">Adaptation Methods</span>
+                            <i id="adaptationMethodsIcon" class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="adaptationMethodsContent" class="about-intro collapsible-content">
+                       
+                        <p data-i18n="hrtf-adaptation-p1">
+                            The adaptation methods was designed to foster perceptual learning through active listening and feedback in immersive virtual environments. The task was a simple spatial exploration task where the 
+                            particiants had to actively search and locate an invisible target around them. To do that they had a permanent audio feedback indicating the distance to the target, in the form of a sound  pulsing faster as they got closer to the target.
+                            In the audiovisual version of the task, they also had a visual feedback, in the form of a glowing orb at the position of the hand changing color depending on the distance to the target.
+                           </p>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="collapsible-section">
+                        <button id="perceptualStudiesToggle" class="collapsible-section-button">
+                            <span data-i18n="hrtf-studies-title">Perceptual Studies</span>
+                            <i id="perceptualStudiesIcon" class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div id="perceptualStudiesContent" class="about-intro collapsible-content">
+                        <p data-i18n="hrtf-studies-p1">
+                            The localization task was designed to measure the localization accuracy before and after the adaptation training. The participants simply had to point with their hand the position of a sound source.
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <h3 style="color: var(--primary-color);" data-i18n="hrtf-pubs-title">Scientific Publications</h3>
+                    <div class="about-intro">
+                        <a href="https://scholar.google.com/scholar?q=Guilbert+Bara+Bouchara+auditory+motor+adaptation+lateral+shift+sound+localization+virtual+reality+2024" target="_blank" rel="noopener noreferrer" class="publication-link" style="text-decoration: none; color: inherit;">
+                            <div class="publication-item" style="margin-bottom: var(--spacing-6); padding: var(--spacing-4); border-left: 3px solid var(--primary-color); background: var(--gray-50); cursor: pointer; transition: all var(--transition-normal);">
+                                <p style="color: var(--gray-700); font-size: 0.9em; line-height: 1.6;">
+                                    Guilbert, A., <strong>Bara, T. G.</strong>, & Bouchara, T. (2024). Auditory-motor adaptation: induction of a lateral shift in sound localization after biased immersive virtual reality training. <em>Frontiers in Cognition</em>, 3, 1400292.
+                                </p>
+                                <div style="margin-top: var(--spacing-2); color: var(--primary-color); font-size: 0.8em;">
+                                    <i class="fas fa-external-link-alt"></i> <span data-i18n="hrtf-view-pub">View on Google Scholar</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://scholar.google.com/scholar?q=Bara+Guilbert+Bouchara+sound+localization+adaptation+vision+AES+2020" target="_blank" rel="noopener noreferrer" class="publication-link" style="text-decoration: none; color: inherit;">
+                            <div class="publication-item" style="margin-bottom: var(--spacing-6); padding: var(--spacing-4); border-left: 3px solid var(--primary-color); background: var(--gray-50); cursor: pointer; transition: all var(--transition-normal);">
+                                <p style="color: var(--gray-700); font-size: 0.9em; line-height: 1.6;">
+                                    <strong>Bara, T. G.</strong>, Guilbert, A., & Bouchara, T. (2020, August). A new step to optimize sound localization adaptation through the use of vision. In <em>Audio Engineering Society Conference: 2020 AES International Conference on Audio for Virtual and Augmented Reality</em>. Audio Engineering Society.
+                                </p>
+                                <div style="margin-top: var(--spacing-2); color: var(--primary-color); font-size: 0.8em;">
+                                    <i class="fas fa-external-link-alt"></i> <span data-i18n="hrtf-view-pub">View on Google Scholar</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://scholar.google.com/scholar?q=Bouchara+Bara+Weiss+Guilbert+vision+sound+localization+training+HRTF+EAA+2019" target="_blank" rel="noopener noreferrer" class="publication-link" style="text-decoration: none; color: inherit;">
+                            <div class="publication-item" style="margin-bottom: var(--spacing-6); padding: var(--spacing-4); border-left: 3px solid var(--primary-color); background: var(--gray-50); cursor: pointer; transition: all var(--transition-normal);">
+                                <p style="color: var(--gray-700); font-size: 0.9em; line-height: 1.6;">
+                                    Bouchara, T., <strong>Bara, T. G.</strong>, Weiss, P. L., & Guilbert, A. (2019, September). Influence of vision on short-term sound localization training with non-individualized HRTF. In <em>EAA Spatial Audio Signal Processing Symposium</em> (pp. 55-60).
+                                </p>
+                                <div style="margin-top: var(--spacing-2); color: var(--primary-color); font-size: 0.8em;">
+                                    <i class="fas fa-external-link-alt"></i> <span data-i18n="hrtf-view-pub">View on Google Scholar</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Portfolio Button -->
+            <div style="text-align: center; margin-top: var(--spacing-16);">
+                <a href="portfolio.html" class="btn btn-primary btn-large">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-i18n="hrtf-back-button">Back to Portfolio</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Tristan-Gael Bara. Bridging cognitive science and technology.</p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Collapsible Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // HRTF Selection
+            const hrtfSelectionToggleButton = document.getElementById('hrtfSelectionToggle');
+            const hrtfSelectionContent = document.getElementById('hrtfSelectionContent');
+            const hrtfSelectionIcon = document.getElementById('hrtfSelectionIcon');
+            
+            // Adaptation Methods
+            const adaptationMethodsToggleButton = document.getElementById('adaptationMethodsToggle');
+            const adaptationMethodsContent = document.getElementById('adaptationMethodsContent');
+            const adaptationMethodsIcon = document.getElementById('adaptationMethodsIcon');
+            
+            // Perceptual Studies
+            const perceptualStudiesToggleButton = document.getElementById('perceptualStudiesToggle');
+            const perceptualStudiesContent = document.getElementById('perceptualStudiesContent');
+            const perceptualStudiesIcon = document.getElementById('perceptualStudiesIcon');
+            
+            // Generic toggle function
+            function setupToggle(toggleButton, content, icon) {
+                if (toggleButton && content && icon) {
+                    // Set initial state - all sections should start closed
+                    content.style.display = 'none';
+                    content.style.opacity = '0';
+                    icon.className = 'fas fa-chevron-down';
+                    
+                    toggleButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const isVisible = content.style.display === 'block';
+                        
+                        if (isVisible) {
+                            // Hide content
+                            content.style.opacity = '0';
+                            setTimeout(() => {
+                                content.style.display = 'none';
+                            }, 300);
+                            icon.className = 'fas fa-chevron-down';
+                            toggleButton.setAttribute('aria-expanded', 'false');
+                        } else {
+                            // Show content
+                            content.style.display = 'block';
+                            setTimeout(() => {
+                                content.style.opacity = '1';
+                            }, 10);
+                            icon.className = 'fas fa-chevron-up';
+                            toggleButton.setAttribute('aria-expanded', 'true');
+                        }
+                    });
+                    
+                    // Set initial aria-expanded attribute
+                    toggleButton.setAttribute('aria-expanded', 'false');
+                }
+            }
+            
+            // Setup all toggles
+            setupToggle(hrtfSelectionToggleButton, hrtfSelectionContent, hrtfSelectionIcon);
+            setupToggle(adaptationMethodsToggleButton, adaptationMethodsContent, adaptationMethodsIcon);
+            setupToggle(perceptualStudiesToggleButton, perceptualStudiesContent, perceptualStudiesIcon);
+        });
+        
+        // Modal functionality
+        function openModal(imageSrc, altText) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const caption = document.getElementById('modalCaption');
+            
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+            modalImg.alt = altText;
+            caption.textContent = altText;
+            
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+    
+    <!-- Image Modal -->
+    <div id="imageModal" style="
+        display: none;
+        position: fixed;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(5px);
+    ">
+        <span onclick="closeModal()" style="
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10001;
+            transition: color 0.3s;
+        " onmouseover="this.style.color='#ccc'" onmouseout="this.style.color='white'">&times;</span>
+        
+        <div style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+        ">
+            <div style="
+                max-width: 90%;
+                max-height: 85vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            ">
+                <img id="modalImage" style="
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+                ">
+                <p id="modalCaption" style="
+                    color: white;
+                    text-align: center;
+                    margin-top: 15px;
+                    font-size: 1.1em;
+                    max-width: 600px;
+                "></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

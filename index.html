@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tristan-Gael Bara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;250;300;350;400;450;500;550;600;650&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Tristan-Gael Bara</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" data-i18n="nav-home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link" data-i18n="nav-portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Images/Tristan-Gael Bara Eng CV 2025.pdf" class="nav-link cv-link" target="_blank" rel="noopener noreferrer">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" data-i18n="nav-contact">Contact</a>
+                </li>
+                <li class="nav-item nav-controls">
+                    <div class="nav-toggle-group">
+                        <!-- Dark mode and language toggles will be added by JavaScript -->
+                    </div>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title fade-in">
+                    <span class="title-main" data-i18n="hero-title">Tristan-Gael Bara</span>
+                    <span class="title-sub" data-i18n="hero-subtitle">Research & VR Specialist</span>
+                </h1>              
+                <div class="hero-buttons fade-in-delay-2">
+                    <a href="about.html" class="btn btn-primary" data-i18n="hero-learn-more">Learn More</a>
+                    <a href="contact.html" class="btn btn-secondary" data-i18n="hero-cta">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-elements">
+                    <div class="element-1 target"></div>
+                    <div class="element-2 target"></div>
+                    <div class="element-3 target"></div>
+                    <div class="element-4 target"></div>
+                    <div class="element-5 target"></div>
+                    <div class="element-6 target"></div>
+                    <div class="element-7 target"></div>
+                    <div class="element-8 target"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Horizontal Line with Wave Animation -->
+        <div class="hero-line-container">
+            <svg id="stage" class="hero-line-svg" viewBox="0 0 800 20" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="whiteGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+                    </linearGradient>
+                    <filter id="whiteGlow">
+                        <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                        <feMerge> 
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                    <filter id="activeGlow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge> 
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                
+                <!-- Single animated line that's always visible -->
+                <path id="wave" d="M 0 10 L 800 10" 
+                      stroke="url(#whiteGradient)" 
+                      stroke-width="3" 
+                      fill="none" 
+                      opacity="1"
+                      filter="url(#whiteGlow)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Tristan-Gael Bara. </p>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="portfolio.html">Portfolio</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
+    <script src="wave.js"></script>
+</body>
+</html>
