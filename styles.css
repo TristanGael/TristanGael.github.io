@@ -202,6 +202,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    /* Prevent text selection cursor (caret) from appearing */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
 }
 
 /* ===== UTILITY CLASSES ===== */
