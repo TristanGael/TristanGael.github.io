@@ -202,12 +202,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    /* Prevent text selection cursor (caret) from appearing */
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    /* Use default cursor (arrow) instead of text cursor (I-beam) */
     cursor: default;
+    /* Hide the blinking insertion caret */
+    caret-color: transparent;
 }
 
 /* ===== UTILITY CLASSES ===== */
