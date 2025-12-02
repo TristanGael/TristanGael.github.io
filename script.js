@@ -660,9 +660,9 @@ const translations = {
         
         // Project Cards
         'project-vr-title': 'Réalité Virtuelle & Diagnostic de la NSU',
-        'project-vr-description': 'Tâches de réalité virtuelle pour diagnostiquer la Négligence Spatiale Unilatérale chez les patients, avec des environnements immersifs interactifs et des une collecte de données précise.',
+        'project-vr-description': 'Tâches de réalité virtuelle pour diagnostiquer la Négligence Spatiale Unilatérale chez les patients, avec des environnements immersifs interactifs.',
         'project-hrtf-title': 'Adaptation aux HRTF',
-        'project-hrtf-description': 'Projet de recherche axé sur l\'adaptation à des fonctions de transfert non-individuelles pour des expériences audio spatiales personnalisées dans des environnements virtuels.',
+        'project-hrtf-description': 'Projet de recherche axé sur l\'adaptation à des fonctions de transfert non-individuelles pour des expériences audio spatiales personnalisées.',
         'project-sonification-title': 'Sonification de formes 3D',
         'project-sonification-description': 'Exploration de l\'utilisation du timbre et de la spatialisation pour la sonification de formes 3D, afin de transmettre les propriétés géométriques par le son.',
         
