@@ -6,7 +6,34 @@ document.addEventListener('DOMContentLoaded', function () {
     initScrollReveal();
     initActiveNavLink();
     initLanguageToggle();
+    initProjectGalleries();
 });
+
+// ===== Project image galleries (VR USN, HRTF) =====
+function initProjectGalleries() {
+    document.querySelectorAll('.project-media[data-gallery]').forEach(function (gallery) {
+        const images = Array.from(gallery.querySelectorAll('img'));
+        const dots = Array.from(gallery.querySelectorAll('.dot'));
+        const prevBtn = gallery.querySelector('.gallery-nav.prev');
+        const nextBtn = gallery.querySelector('.gallery-nav.next');
+        if (images.length < 2) return;
+
+        let index = images.findIndex(function (img) { return img.classList.contains('active'); });
+        if (index < 0) index = 0;
+
+        function show(newIndex) {
+            index = (newIndex + images.length) % images.length;
+            images.forEach(function (img, i) { img.classList.toggle('active', i === index); });
+            dots.forEach(function (dot, i) { dot.classList.toggle('active', i === index); });
+        }
+
+        if (prevBtn) prevBtn.addEventListener('click', function () { show(index - 1); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { show(index + 1); });
+        dots.forEach(function (dot, i) {
+            dot.addEventListener('click', function () { show(i); });
+        });
+    });
+}
 
 // ===== Mobile navigation toggle =====
 function initMobileNav() {
