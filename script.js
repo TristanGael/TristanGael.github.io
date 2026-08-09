@@ -134,7 +134,7 @@ const translations = {
         'nav-background': 'Parcours',
         'nav-contact': 'Contact',
         'nav-cv': 'CV',
-        'hero-title': '<span class="accent"> Prototypage </span> en recherche  comportementale &amp; XR',
+        'hero-title': 'Prototypage en <span class="accent">recherche  comportementale &amp; XR </span>',
         'hero-text': 'Conception expérimentale, développement Unity et analyse de données pour la recherche comportementale, IHM et immersive.',
         'hero-btn-work': 'Voir mes projets',
         'hero-btn-contact': 'Me contacter',
