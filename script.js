@@ -105,7 +105,7 @@ const translations = {
         'proj2-problem': 'Non-individualized Head-Related Transfer Functions (HRTFs) reduce sound-localization accuracy in VR, and measuring individual HRTFs is impractical outside specialized labs.',
         'proj2-built': 'A VR-based HRTF selection method and an active, feedback-driven training protocol, evaluated through pre/post sound-localization studies.',
         'proj2-contribution': 'Designed the HRTF selection and adaptation protocols and implemented them in Unity with spatial audio processing.',
-        'proj3-title': 'Sonification of 3D Shapes',
+        'proj3-title': 'Sonification of 3D Shapes (in progress)',
         'proj3-problem': 'Conveying the geometric properties of a 3D shape through sound alone, without visual access to the object.',
         'proj3-built': 'An auditory display exploring the use of timbre and spatialization to represent geometric properties of 3D shapes.',
         'proj3-status': 'Ongoing independent research project — literature synthesis, design of auditory mappings, a 3D-shape processing and sound-synthesis pipeline, and preparation of perceptual experiments.',
@@ -120,10 +120,6 @@ const translations = {
         'tag-multisensory': 'Multisensory interaction',
         'tag-auditory-motor': 'Auditory-motor adaptation',
         'tag-avatar': 'Avatar &amp; body perception',
-        'fact1-label': 'Scientific publications &amp; conference papers in VR-based neuropsychological assessment and spatial audio perception',
-        'fact2-label': 'Research projects spanning the full experimental cycle, from question to implementation',
-        'fact3-label': 'Cognitive Psychology, Paris Descartes University',
-        'fact4-label': 'Studies in Human-Computer Interaction, CNAM Paris — discontinued before completion',
         'tools-eyebrow': 'Tools &amp; methods',
         'tool-exp-design': 'Experimental design',
         'tool-statistics': 'Statistics',
@@ -168,7 +164,7 @@ const translations = {
         'proj2-problem': 'Les fonctions de transfert relatives à la tête (HRTF) non individualisées réduisent la précision de la localisation sonore en RV, et la mesure de HRTF individuelles est peu praticable hors des laboratoires spécialisés.',
         'proj2-built': 'Une méthode de sélection de HRTF en RV et un protocole d\'entraînement actif avec retour, évalués par des études de localisation sonore avant/après.',
         'proj2-contribution': 'Conception des protocoles de sélection et d\'adaptation des HRTF, implémentés sous Unity avec traitement audio spatial.',
-        'proj3-title': 'Sonification de formes 3D',
+        'proj3-title': 'Sonification de formes 3D (en cours)',
         'proj3-problem': 'Transmettre les propriétés géométriques d\'une forme 3D par le son seul, sans accès visuel à l\'objet.',
         'proj3-built': 'Un dispositif auditif explorant l\'usage du timbre et de la spatialisation pour représenter les propriétés géométriques de formes 3D.',
         'proj3-status': 'Projet de recherche indépendant en cours — synthèse de la littérature, conception de correspondances auditives, pipeline de traitement de formes 3D et de synthèse sonore, et préparation d\'expériences perceptives.',
@@ -183,10 +179,6 @@ const translations = {
         'tag-multisensory': 'Interaction multisensorielle',
         'tag-auditory-motor': 'Adaptation audio-motrice',
         'tag-avatar': 'Perception de l\'avatar &amp; du corps',
-        'fact1-label': 'Publications scientifiques &amp; actes de conférence en évaluation neuropsychologique en RV et perception audio spatiale',
-        'fact2-label': 'Projets de recherche couvrant l\'ensemble du cycle expérimental, de la question à l\'implémentation',
-        'fact3-label': 'Psychologie cognitive, Université Paris Descartes',
-        'fact4-label': 'Études en interaction homme-machine, CNAM Paris — interrompues avant leur achèvement',
         'tools-eyebrow': 'Outils &amp; méthodes',
         'tool-exp-design': 'Conception expérimentale',
         'tool-statistics': 'Statistiques',
@@ -224,10 +216,17 @@ function initLanguageToggle() {
     const toggle = document.getElementById('langToggle');
     if (!toggle) return;
 
-    let saved = 'en';
-    try { saved = localStorage.getItem('lang') || 'en'; } catch (e) { /* ignore storage errors */ }
-    if (saved !== 'fr') saved = 'en';
-    applyLanguage(saved);
+    let saved = null;
+    try { saved = localStorage.getItem('lang'); } catch (e) { /* ignore storage errors */ }
+
+    let lang;
+    if (saved === 'fr' || saved === 'en') {
+        lang = saved;
+    } else {
+        const browserLang = navigator.language || (navigator.languages && navigator.languages[0]) || 'en';
+        lang = browserLang.toLowerCase().startsWith('fr') ? 'fr' : 'en';
+    }
+    applyLanguage(lang);
 
     toggle.addEventListener('click', function () {
         const current = document.documentElement.getAttribute('lang') === 'fr' ? 'fr' : 'en';
