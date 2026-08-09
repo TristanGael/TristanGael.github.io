@@ -3,147 +3,373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tristan-Gael Bara - Portfolio | Research & VR Specialist</title>
-    
+    <title>Tristan-Gael Bara — XR & Behavioral Research Prototyping</title>
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="I am a researcher and developer specializing in Cognitive Psychology, Human-Computer Interaction (HCI), and Virtual Reality (VR).">
-    <meta name="keywords" content="Tristan-Gael Bara, Portfolio, Cognitive Psychology, HCI, Human-Computer Interaction, Virtual Reality, VR, Unity Developer, Research, Spatial Audio">
+    <meta name="description" content="Experimental design, Unity/XR development and data analysis for behavioral, HCI and immersive research. Research background in cognitive psychology, VR neuropsychological assessment and spatial audio.">
+    <meta name="keywords" content="Tristan-Gael Bara, XR research, VR research prototyping, Unity developer, behavioral experiments, cognitive psychology, HCI, experimental design, data analysis">
     <meta name="author" content="Tristan-Gael Bara">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tristangael.github.io/">
-    <meta property="og:title" content="Tristan-Gael Bara - Portfolio | Research & VR Specialist">
-    <meta property="og:description" content="Explore the work of Tristan-Gael Bara, focusing on VR, HCI, and cognitive science.">
+    <meta property="og:title" content="Tristan-Gael Bara — XR & Behavioral Research Prototyping">
+    <meta property="og:description" content="Experimental design, Unity development and data analysis for behavioral, HCI and immersive research.">
     <meta property="og:image" content="https://tristangael.github.io/Images/image%20site%20thesis.png">
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://tristangael.github.io/">
-    <meta property="twitter:title" content="Tristan-Gael Bara - Portfolio | Research & VR Specialist">
-    <meta property="twitter:description" content="Explore the work of Tristan-Gael Bara, focusing on VR, HCI, and cognitive science.">
-    <meta property="twitter:image" content="https://tristangael.github.io/Images/image%20site%20thesis.png">
+    <meta property="twitter:title" content="Tristan-Gael Bara — XR & Behavioral Research Prototyping">
+    <meta property="twitter:description" content="Experimental design, Unity development and data analysis for behavioral, HCI and immersive research.">
 
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;250;300;350;400;450;500;550;600;650&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">Tristan-Gael Bara</a>
+                <a href="#top">Tristan-Gael Bara</a>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link" data-i18n="nav-home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link" data-i18n="nav-about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="portfolio.html" class="nav-link" data-i18n="nav-portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Images/Tristan-Gael Bara Eng CV 2025.pdf" class="nav-link cv-link" target="_blank" rel="noopener noreferrer">CV</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link" data-i18n="nav-contact">Contact</a>
-                </li>
-                <li class="nav-item nav-controls">
-                    <div class="nav-toggle-group">
-                        <!-- Dark mode and language toggles will be added by JavaScript -->
-                    </div>
-                </li>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#work" class="nav-link" data-i18n="nav-work">Work</a></li>
+                <li><a href="#background" class="nav-link" data-i18n="nav-background">Background</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+                <li><a id="cvLink" href="Images/Tristan-Gael Bara Eng CV 2025.pdf" class="nav-link cv-link" target="_blank" rel="noopener noreferrer" data-i18n="nav-cv">CV</a></li>
+                <li><button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">FR</button></li>
             </ul>
-            <div class="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title fade-in">
-                    <span class="title-main" data-i18n="hero-title">Tristan-Gael Bara</span>
-                    <span class="title-sub" data-i18n="hero-subtitle">Research & VR Specialist</span>
-                </h1>              
-                <div class="hero-buttons fade-in-delay-2">
-                    <a href="about.html" class="btn btn-primary" data-i18n="hero-learn-more">Learn More</a>
-                    <a href="contact.html" class="btn btn-secondary" data-i18n="hero-cta">Get In Touch</a>
-                </div>
+    <!-- Hero -->
+    <section id="top" class="hero">
+        <div class="container">
+            <span class="hero-name">Tristan-Gael Bara</span>
+            <h1 class="hero-title" data-i18n="hero-title">XR &amp; Behavioral <span class="accent">Research Prototyping</span></h1>
+            <p class="hero-text" data-i18n="hero-text">
+                Experimental design, Unity development, and data analysis for behavioral, HCI, and immersive research.
+            </p>
+            <div class="hero-buttons">
+                <a href="#work" class="btn btn-primary" data-i18n="hero-btn-work">View selected work</a>
+                <a href="#contact" class="btn btn-secondary" data-i18n="hero-btn-contact">Contact me</a>
             </div>
-            <div class="hero-visual">
-                <div class="floating-elements">
-                    <div class="element-1 target"></div>
-                    <div class="element-2 target"></div>
-                    <div class="element-3 target"></div>
-                    <div class="element-4 target"></div>
-                    <div class="element-5 target"></div>
-                    <div class="element-6 target"></div>
-                    <div class="element-7 target"></div>
-                    <div class="element-8 target"></div>
+        </div>
+    </section>
+
+    <!-- What I do -->
+    <section id="capabilities" class="capabilities">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow" data-i18n="capabilities-eyebrow">What I do</span>
+                
+            </div>
+            <div class="capabilities-grid">
+                <div class="capability-card reveal">
+                    <div class="capability-icon"><i class="fas fa-vr-cardboard"></i></div>
+                    <h3 data-i18n="cap1-title">XR / VR research prototyping</h3>
+                    <p data-i18n="cap1-desc">Building Unity-based VR/XR applications to run controlled experiments — stimulus presentation, interaction design, and precise behavioral logging inside immersive environments.</p>
+                </div>
+                <div class="capability-card reveal">
+                    <div class="capability-icon"><i class="fas fa-flask"></i></div>
+                    <h3 data-i18n="cap2-title">Behavioral experiment implementation</h3>
+                    <p data-i18n="cap2-desc">Turning an experimental protocol into working software — trial structure, timing, randomization, response collection, and reliable data capture.</p>
+                </div>
+                <div class="capability-card reveal">
+                    <div class="capability-icon"><i class="fas fa-diagram-project"></i></div>
+                    <h3 data-i18n="cap3-title">Experimental design &amp; research methods</h3>
+                    <p data-i18n="cap3-desc">Shaping a research question into a testable design — task structure, controls, sampling, and methodology grounded in cognitive science.</p>
+                </div>
+                <div class="capability-card reveal">
+                    <div class="capability-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 data-i18n="cap4-title">Data analysis &amp; scientific workflows</h3>
+                    <p data-i18n="cap4-desc">Processing and analyzing behavioral data in R, Python, or MATLAB</p>
                 </div>
             </div>
         </div>
-        
-        <!-- Horizontal Line with Wave Animation -->
-        <div class="hero-line-container">
-            <svg id="stage" class="hero-line-svg" viewBox="0 0 800 20" preserveAspectRatio="none">
-                <defs>
-                    <linearGradient id="whiteGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
-                        <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
-                    </linearGradient>
-                    <filter id="whiteGlow">
-                        <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
-                        <feMerge> 
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                    </filter>
-                    <filter id="activeGlow">
-                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                        <feMerge> 
-                            <feMergeNode in="coloredBlur"/>
-                            <feMergeNode in="SourceGraphic"/>
-                        </feMerge>
-                    </filter>
-                </defs>
+    </section>
+
+    <!-- Selected research work -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow" data-i18n="work-eyebrow">Selected research work</span>
+                <h2 class="section-heading" data-i18n="work-heading">Projects combining methodology and implementation</h2>
+                <p class="section-lede" data-i18n="work-lede">Three research projects spanning virtual reality, clinical assessment, and spatial audio perception.</p>
+            </div>
+
+            <!-- Project 1: VR USN -->
+            <article class="project reveal">
+                <div class="project-media">
+                    <img src="Images/cloches vr.png" alt="VR Bells Test scene: silhouette icons scattered across a virtual field with a laser pointer selecting a target">
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title" data-i18n="proj1-title">VR Diagnostic Tasks for Unilateral Spatial Neglect</h3>
+                    <div class="project-field">
+                        <span class="label" data-i18n="field-problem">Problem</span>
+                        <p data-i18n="proj1-problem">Standard paper-based neuropsychological tests for spatial neglect (bells test, baking tray test, line bisection) have limited ecological validity and coarse, manual scoring.</p>
+                    </div>
+                    <div class="project-field">
+                        <span class="label" data-i18n="field-built">Built</span>
+                        <p data-i18n="proj1-built">VR replicas and ecological versions of all three clinical tasks in Unity, with automatic spatial-exploration tracking and result visualization for clinicians.</p>
+                    </div>
+                    <div class="project-field">
+                        <span class="label" data-i18n="field-contribution">Contribution</span>
+                        <p data-i18n="proj1-contribution">Designed and implemented the VR applications (Unity/C#) — 3D environments, interaction scripting, and the data-collection pipeline for clinical analysis.</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">VR</span>
+                        <span class="tag">Neuropsychological assessment</span>
+                    </div>
+                    <div class="project-footer">
+                        <details class="task-block project-pubs-details">
+                            <summary data-i18n="pubs-toggle">Publications (3)</summary>
+                            <div class="task-content">
+                                <a href="https://scholar.google.com/scholar?q=%C3%89valuation+de+la+n%C3%A9gligence+spatiale+unilat%C3%A9rale+en+r%C3%A9alit%C3%A9+virtuelle+une+%C3%A9tude+de+cas+Gaffard+Bourlon+Bara" target="_blank" rel="noopener noreferrer" class="publication-item">
+                                    <p>Gaffard, M., Bourlon, C., <strong>Bara, T. G.</strong>, Bouchara, T., &amp; Guilbert, A. (2023). Évaluation de la négligence spatiale unilatérale en réalité virtuelle: une étude de cas. <em>Revue Neurologique</em>, 179, S89.</p>
+                                    <span class="pub-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="pub-view">View on Google Scholar</span></span>
+                                </a>
+                                <a href="https://scholar.google.com/scholar?q=Validation+of+immersive+virtual+reality+line+and+baguette+bisection+tasks+for+the+assessment+of+unilateral+spatial+neglect+Gaffard+Bourlon+Bara" target="_blank" rel="noopener noreferrer" class="publication-item">
+                                    <p>Gaffard, M., Bourlon, C., <strong>Bara, T. G.</strong>, Bouchara, T., Colle, F., Silvestri, S., ... &amp; Guilbert, A. (2025). Validation of immersive virtual reality line and baguette bisection tasks for the assessment of unilateral spatial neglect. <em>Neuropsychology</em>.</p>
+                                    <span class="pub-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="pub-view">View on Google Scholar</span></span>
+                                </a>
+                                <a href="https://scholar.google.com/scholar?q=Ecological+assessment+of+unilateral+spatial+neglect+in+immersive+virtual+reality+A+multiple-case+study+to+assess+the+feasibility+and+relevance+of+a+Baking+Tray+Task+Gaffard+Bourlon+Bara" target="_blank" rel="noopener noreferrer" class="publication-item">
+                                    <p>Gaffard, M., Bourlon, C., <strong>Bara, T. G.</strong>, Bouchara, T., Colle, F., Silvestri, S., ... &amp; Guilbert, A. (2025). Ecological assessment of unilateral spatial neglect in immersive virtual reality: A multiple-case study to assess the feasibility and relevance of a Baking Tray Task. <em>Neuropsychological Rehabilitation</em>, 35(6), 1210-1228.</p>
+                                    <span class="pub-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="pub-view">View on Google Scholar</span></span>
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: HRTF Adaptation -->
+            <article class="project reveal">
+                <div class="project-media">
+                    <img src="Images/image site thesis.png" alt="Illustration of a VR avatar reaching toward a glowing orb with a spatial sound wave pattern">
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title" data-i18n="proj2-title">HRTF Adaptation for Spatial Audio in VR</h3>
+                    <div class="project-field">
+                        <span class="label" data-i18n="field-problem">Problem</span>
+                        <p data-i18n="proj2-problem">Non-individualized Head-Related Transfer Functions (HRTFs) reduce sound-localization accuracy in VR, and measuring individual HRTFs is impractical outside specialized labs.</p>
+                    </div>
+                    <div class="project-field">
+                        <span class="label" data-i18n="field-built">Built</span>
+                        <p data-i18n="proj2-built">A VR-based HRTF selection method and an active, feedback-driven training protocol, evaluated through pre/post sound-localization studies.</p>
+                    </div>
+                    <div class="project-field">
+                        <span class="label" data-i18n="field-contribution">Contribution</span>
+                        <p data-i18n="proj2-contribution">Designed the HRTF selection and adaptation protocols and implemented them in Unity with spatial audio processing.</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Spatial audio</span>
+                        <span class="tag">Psychoacoustics</span>
+                    </div>
+                    <div class="project-footer">
+                        <details class="task-block project-pubs-details">
+                            <summary data-i18n="pubs-toggle">Publications (3)</summary>
+                            <div class="task-content">
+                                <a href="https://scholar.google.com/scholar?q=Guilbert+Bara+Bouchara+auditory+motor+adaptation+lateral+shift+sound+localization+virtual+reality+2024" target="_blank" rel="noopener noreferrer" class="publication-item">
+                                    <p>Guilbert, A., <strong>Bara, T. G.</strong>, &amp; Bouchara, T. (2024). Auditory-motor adaptation: induction of a lateral shift in sound localization after biased immersive virtual reality training. <em>Frontiers in Cognition</em>, 3, 1400292.</p>
+                                    <span class="pub-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="pub-view">View on Google Scholar</span></span>
+                                </a>
+                                <a href="https://scholar.google.com/scholar?q=Bara+Guilbert+Bouchara+sound+localization+adaptation+vision+AES+2020" target="_blank" rel="noopener noreferrer" class="publication-item">
+                                    <p><strong>Bara, T. G.</strong>, Guilbert, A., &amp; Bouchara, T. (2020, August). A new step to optimize sound localization adaptation through the use of vision. In <em>Audio Engineering Society Conference: 2020 AES International Conference on Audio for Virtual and Augmented Reality</em>. Audio Engineering Society.</p>
+                                    <span class="pub-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="pub-view">View on Google Scholar</span></span>
+                                </a>
+                                <a href="https://scholar.google.com/scholar?q=Bouchara+Bara+Weiss+Guilbert+vision+sound+localization+training+HRTF+EAA+2019" target="_blank" rel="noopener noreferrer" class="publication-item">
+                                    <p>Bouchara, T., <strong>Bara, T. G.</strong>, Weiss, P. L., &amp; Guilbert, A. (2019, September). Influence of vision on short-term sound localization training with non-individualized HRTF. In <em>EAA Spatial Audio Signal Processing Symposium</em> (pp. 55-60).</p>
+                                    <span class="pub-link"><i class="fas fa-external-link-alt"></i> <span data-i18n="pub-view">View on Google Scholar</span></span>
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Sonification -->
+            <article class="project reveal">
+                <div class="project-media placeholder">
+                    <i class="fas fa-wave-square"></i>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title" data-i18n="proj3-title">Sonification of 3D Shapes</h3>
+                    <div class="project-field">
+                        <span class="label" data-i18n="field-problem">Problem</span>
+                        <p data-i18n="proj3-problem">Conveying the geometric properties of a 3D shape through sound alone, without visual access to the object.</p>
+                    </div>
+                    <div class="project-field">
+                        <span class="label" data-i18n="field-built">Built</span>
+                        <p data-i18n="proj3-built">An auditory display exploring the use of timbre and spatialization to represent geometric properties of 3D shapes.</p>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Sonification</span>
+                        <span class="tag">SuperCollider</span>
+                        <span class="tag">C++</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Research background / credibility -->
+    <section id="background" class="background">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow" data-i18n="background-eyebrow">Background</span>
+                <h2 class="section-heading" data-i18n="background-heading">Research background</h2>
+            </div>
+            <div class="background-grid">
+                <div class="background-text reveal">
+                    <p data-i18n="background-p1">
+                        I have a background in cognitive psychology and human-computer interaction. My research has covered the full research cycle —
+                        literature review, research-question development, experimental design, implementation, participant studies, data analysis,
+                        and scientific writing.
+                    </p>
+                    <p data-i18n="background-p2">
+                        I hold a Master's degree in Cognitive Psychology from Paris Descartes University, where I researched adaptation to
+                        non-individual Head-Related Transfer Functions for spatial audio in VR. I began PhD studies at the Conservatoire National
+                        des Arts et Métiers (CNAM) in Paris, specialized in Human-Computer Interaction, researching the use of virtual reality for
+                        neuropsychological assessment and rehabilitation — focused on diagnosing Unilateral Spatial Neglect and developing new
+                        therapeutic approaches. These studies were not completed.
+                    </p>
+                    <div class="research-areas">
+                        <span class="label" data-i18n="research-areas-label">Research areas</span>
+                        <div class="tags">
+                            <span class="tag" data-i18n="tag-spatial-cognition">Spatial cognition</span>
+                            <span class="tag" data-i18n="tag-vr-xr">VR / XR experimentation</span>
+                            <span class="tag" data-i18n="tag-neuro-assessment">Neuropsychological assessment</span>
+                            <span class="tag" data-i18n="tag-multisensory">Multisensory interaction</span>
+                            <span class="tag" data-i18n="tag-auditory-motor">Auditory-motor adaptation</span>
+                            <span class="tag" data-i18n="tag-avatar">Avatar &amp; body perception</span>
+                            <span class="tag">HCI</span>
+                        </div>
+                    </div>
+                    <div class="credibility-links">
+                        <a href="https://scholar.google.com/scholar?hl=fr&as_sdt=0%2C5&q=Tristan-Gael+Bara&btnG=" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">
+                            <i class="fas fa-university"></i> Google Scholar
+                        </a>
+                        <a href="Images/Tristan-Gael Bara Eng CV 2025.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">
+                            <i class="fas fa-file-arrow-down"></i> CV (EN)
+                        </a>
+                        <a href="Images/Tristan-Gael Bara CV 2025.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">
+                            <i class="fas fa-file-arrow-down"></i> CV (FR)
+                        </a>
+                    </div>
+                </div>
+                <div class="background-facts reveal">
+                    <div class="background-fact">
+                        <span class="fact-num">6</span>
+                        <span class="fact-label" data-i18n="fact1-label">Peer-reviewed publications in VR-based neuropsychological assessment and spatial audio perception</span>
+                    </div>
+                    <div class="background-fact">
+                        <span class="fact-num">3</span>
+                        <span class="fact-label" data-i18n="fact2-label">Full research projects taken from question to publication</span>
+                    </div>
+                    <div class="background-fact">
+                        <span class="fact-num">MSc</span>
+                        <span class="fact-label" data-i18n="fact3-label">Cognitive Psychology, Paris Descartes University</span>
+                    </div>
+                    <div class="background-fact">
+                        <span class="fact-num">PhD</span>
+                        <span class="fact-label" data-i18n="fact4-label">Studies in Human-Computer Interaction, CNAM Paris (not completed)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools / expertise -->
+    <section id="tools" class="tools-strip">
+        <div class="container reveal">
+            <span class="eyebrow" data-i18n="tools-eyebrow">Tools &amp; methods</span>
+            <div class="tools-list">
+                <span class="tool">Unity</span>
+                <span class="tool">C#</span>
+                <span class="tool">Python</span>
+                <span class="tool">R</span>
+                <span class="tool">MATLAB</span>
+                <span class="tool">XR / VR</span>
+                <span class="tool" data-i18n="tool-exp-design">Experimental design</span>
+                <span class="tool" data-i18n="tool-statistics">Statistics</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Availability / Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow" data-i18n="contact-eyebrow">Availability</span>
                 
-                <!-- Single animated line that's always visible -->
-                <path id="wave" d="M 0 10 L 800 10" 
-                      stroke="url(#whiteGradient)" 
-                      stroke-width="3" 
-                      fill="none" 
-                      opacity="1"
-                      filter="url(#whiteGlow)"/>
-            </svg>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-text reveal">
+                    <p data-i18n="contact-p1">
+                        I'm open to short research, prototyping, or experimental-development assignments, as well as freelance consulting work.
+                    </p>
+                    <p data-i18n="contact-p2">
+                        I'm also interested in research collaborations, academic partnerships, and PhD supervision opportunities.
+                    </p>
+                </div>
+                <div class="contact-list reveal">
+                    <div class="contact-row">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:bara.tristangael@gmail.com">bara.tristangael@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="icon"><i class="fab fa-linkedin"></i></div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <a href="https://www.linkedin.com/in/tristan-gael-bara-45a5a4b1/" target="_blank" rel="noopener noreferrer">tristan-gael-bara</a>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="icon"><i class="fas fa-university"></i></div>
+                        <div>
+                            <h3>Google Scholar</h3>
+                            <a href="https://scholar.google.com/scholar?hl=fr&as_sdt=0%2C5&q=Tristan-Gael+Bara&btnG=" target="_blank" rel="noopener noreferrer">Publication list</a>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3 data-i18n="contact-location-title">Location</h3>
+                            <p data-i18n="contact-location-text">Rennes / Paris, France — available remote</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Tristan-Gael Bara. </p>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="contact.html">Contact</a>
-                </div>
+        <div class="container footer-content">
+            <p>&copy; 2026 Tristan-Gael Bara</p>
+            <div class="footer-links">
+                <a href="#work" data-i18n="nav-work">Work</a>
+                <a href="#background" data-i18n="nav-background">Background</a>
+                <a href="#contact" data-i18n="nav-contact">Contact</a>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
-    <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js"></script>
-    <script src="wave.js"></script>
 </body>
 </html>
